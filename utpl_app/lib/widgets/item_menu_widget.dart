@@ -18,34 +18,37 @@ class ItemMenuWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 12) ,
-      child: ListTile(
-        
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children:[
-            Text(
-              tituloMenu,
-              textAlign: TextAlign.end,
-              style: const TextStyle(fontSize: 20, color: Colors.white),
-            ),
-     
-          ], 
+      child: SizedBox(
+        height: 80,
+        child: ListTile(
+          
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children:[
+               Text(
+                  tituloMenu,
+                  textAlign: TextAlign.end,
+                  style: const TextStyle(fontSize: 18, color: Colors.white),
+                ),
+              
+            ], 
+          ),
+          leading: Icon(
+            icono,
+            size: 70,
+            color: Colors.white,
+          ),
+          trailing: const Icon(
+                Icons.arrow_forward_ios_sharp,
+                size: 35,
+                color: Colors.white,
+              ),
+          onTap: (){
+            Navigator.pushNamed(context, ruta);              
+          },
+          tileColor: color, 
         ),
-        leading: Icon(
-          icono,
-          size: 70,
-          color: Colors.white,
-        ),
-        trailing: const Icon(
-              Icons.arrow_forward_ios_sharp,
-              size: 35,
-              color: Colors.white,
-            ),
-        onTap: (){
-          Navigator.pushNamed(context, ruta);              
-        },
-        tileColor: color, 
       ),
     );
   }

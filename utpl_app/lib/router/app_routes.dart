@@ -10,6 +10,7 @@ class AppRoutes{
   static final menuoptions = <MenuOptions>[
     //MenuOptions(route: 'home_screen', name: 'Home Screen', screen: const HomeScreen(), icon: Icons.access_alarm), Icons.list
     MenuOptions(route: 'home_screen', name: 'UTPL App', screen: const HomeScreen(), icon: Icons.home_filled),
+    MenuOptions(route: 'pruebas_screen', name: 'Pruebas App', screen: const PruebasScreen(), icon: Icons.home_filled),
    /* MenuOptions(route: 'listview_screen2', name: 'Listview Screen 2', screen: const ListViewScreen2(), icon: Icons.list_alt),
     MenuOptions(route: 'alert_screen', name: 'Alert Screen', screen: const AlertScreen(), icon: Icons.add_a_photo),
     MenuOptions(route: 'card_screen', name: 'Card Screen', screen: const CardScreen(), icon: Icons.card_giftcard),
